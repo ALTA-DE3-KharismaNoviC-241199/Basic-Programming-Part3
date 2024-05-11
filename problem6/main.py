@@ -1,5 +1,23 @@
 def full_prima(N):
-    # your code here
+    if N == 1:
+          print("True")
+    
+    if N > 1:
+         for n in range (2,N):
+              if N % 2 == 0:
+                   return "True"
+              elif N == 2:
+                   return "True"
+              elif N <= 2:
+                   return "False"
+         else:
+              for i in range (3, int(N**0.5) + 1, 2):
+                   if N % i == 0:
+                        return "False"
+                   if N % i <=3:
+                        return "True"
+              return "True"
+
     return ''
 
 if __name__ == '__main__':

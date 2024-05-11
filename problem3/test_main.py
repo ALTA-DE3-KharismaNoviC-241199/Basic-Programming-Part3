@@ -23,4 +23,4 @@ class TestPrimeNumber(unittest.TestCase):
         self.assertEqual(result, "Not Prime", msg="Expected 'Not Prime' for input 35")
         
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main(verbosity=2)

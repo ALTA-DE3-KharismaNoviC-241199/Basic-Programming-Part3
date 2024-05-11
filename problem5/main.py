@@ -1,5 +1,9 @@
 def pangkat(base, pangkat):
-    # your code here
+    result = 1
+    for i in range(pangkat):
+        result = result * base
+    return result
+
     return 'error response'
 
 

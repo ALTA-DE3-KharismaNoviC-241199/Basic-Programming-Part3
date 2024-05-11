@@ -1,4 +1,6 @@
 def palindrome(input_string):
+    return input_string == input_string [::-1]
+
     return 'error response'
 
 
