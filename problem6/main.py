@@ -1,25 +1,37 @@
+def prime_number(N):
+    # your code here
+    if N <= 1:
+        return False
+    for i in range (2, N):
+        if N % i == 0:
+            return False
+    return True
+
 def full_prima(N):
-    if N == 1:
-          print("True")
-    
-    if N > 1:
-         for n in range (2,N):
-              if N % 2 == 0:
-                   return "True"
-              elif N == 2:
-                   return "True"
-              elif N <= 2:
-                   return "False"
-         else:
-              for i in range (3, int(N**0.5) + 1, 2):
-                   if N % i == 0:
-                        return "False"
-                   if N % i <=3:
-                        return "True"
-              return "True"
+    if N <= 0:
+        return False
 
-    return ''
+    while N > 0:
+        digit = N % 10
+        if not prime_number(digit):
+            return False
+        N //= 10
+    return True
 
+def full_prima(N):
+    str_number = str(N)
+
+    if N <= 0:
+        return False
+
+    for i in range(len(str_number)):
+        if not prime_number(int(str_number[i])):
+            return False
+
+    if not prime_number(N):
+        return False
+
+    return True
 if __name__ == '__main__':
     print(full_prima(2)) # True
     print(full_prima(3)) # True
